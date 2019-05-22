@@ -24,7 +24,7 @@
       "git add"
     ]
   },
-  "author": "",
+  "author": "Magda",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.12.0",
