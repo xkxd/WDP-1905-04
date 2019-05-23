@@ -49,11 +49,12 @@
     }
   }
 
-  &.active {
+  &.active:hover {
     i {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
+      cursor: pointer;
     }
 
     .content {
