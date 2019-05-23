@@ -42,11 +42,8 @@
   }
 }
 
-// .actives {
-//   @extend .btn-outline;
-//   &:hover {
-//     background-color: $primary;
-//     color: #ffffff;
-//     border-color: $primary;
-//   }
-// }
+.outlines > .active {
+  background-color: $primary;
+  color: #ffffff;
+  border-color: $primary;
+}
