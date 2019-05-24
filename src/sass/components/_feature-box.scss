@@ -62,14 +62,31 @@
     }
   }
 
-  &.active:hover {
+  &.task:hover {
     i {
-      background-color: #934040;
-      border-color: #934040;
+      background-color: $primary;
+      color: #ffffff;
+      border-color: $primary;
+      cursor: pointer;
     }
 
     .content {
-      color: #934040;
+      color: $primary;
+    }
+  }
+}
+
+@media (hover: none) {
+  &.task {
+    i {
+      background-color: $primary;
+      color: #ffffff;
+      border-color: $primary;
+      cursor: pointer;
+    }
+
+    .content {
+      color: $primary;
     }
   }
 }
