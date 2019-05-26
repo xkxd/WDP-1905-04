@@ -170,6 +170,7 @@ header {
         border-right: 1px solid $form-border-color;
         display: flex;
         align-items: center;
+        width: 220px;
         position: relative;
         &:hover {
           background-color: rgba(36, 34, 34, 0.4);
@@ -197,19 +198,65 @@ header {
           padding: 5px 30px 5px 35px;
           font-size: 14px;
           position: relative;
-          z-index: 1;
           cursor: pointer;
-          option {
+          .list-ul {
             background-color: $primary;
+            list-style-type: none;
+            font-size: 15px;
+            padding: 0;
+            text-align: center;
+            width: 220px;
+            position: absolute;
+            z-index: 10;
+            top: 37px;
+            left: -1px;
+            display: none;
+            a {
+              color: rgb(46, 44, 44);
+              text-decoration: none;
+            }
+            li {
+              padding: 5px 0;
+              display: block;
+              &:hover {
+                background-color: rgba(36, 34, 34, 0.4);
+              }
+              &:hover a {
+                color: #ffffff;
+              }
+            }
+            li > ul {
+              position: absolute;
+              top: 70px;
+              left: 220px;
+              z-index: 10;
+              width: 200px;
+              padding-inline-start: 0px;
+              background-color: $primary;
+              display: none;
+            }
+            .link-sofa > ul > li > a {
+              color: rgb(46, 44, 44);
+              &:hover {
+                color: #ffffff;
+              }
+            }
+            .link-sofa:hover ul {
+              display: block;
+            }
           }
         }
+      }
+
+      .category:hover .list-ul {
+        display: block;
       }
 
       .search-field {
         display: flex;
         align-items: center;
         position: relative;
-
+        width: 220px;
         input {
           border: 0;
           padding-left: 10px;
