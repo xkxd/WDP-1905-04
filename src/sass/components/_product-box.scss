@@ -80,3 +80,35 @@
     align-items: center;
   }
 }
+
+.section--products {
+  .row {
+    justify-content: center;
+  }
+  .col-3 {
+    min-width: 280px;
+  }
+}
+
+.section--blog-posts {
+  .row {
+    justify-content: center;
+  }
+  .col-4 {
+    min-width: 280px;
+  }
+}
+
+.col-auto {
+  box-sizing: border-box;
+  max-width: 100vw;
+  ul {
+    flex-wrap: wrap;
+  }
+}
+
+.menu-bar {
+  form {
+    max-width: 100%;
+  }
+}
