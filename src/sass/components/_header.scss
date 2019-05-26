@@ -254,31 +254,3 @@ header {
     flex-wrap: wrap;
   }
 }
-
-@media only screen and (min-width: 768px) {
-  // tablets
-  .container {
-    flex-wrap: wrap;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    top: 0;
-  }
-}
-
-@media only screen and (max-width: 468px) {
-  // mobile-phone
-  .container {
-    flex-wrap: wrap;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    top: 0;
-  }
-}
