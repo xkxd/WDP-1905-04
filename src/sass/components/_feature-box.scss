@@ -62,7 +62,7 @@
     }
   }
 
-  &.task:hover {
+  .task:hover {
     i {
       background-color: $primary;
       color: #ffffff;
@@ -77,7 +77,7 @@
 }
 
 @media (hover: none) {
-  &.task {
+  .task {
     i {
       background-color: $primary;
       color: #ffffff;
