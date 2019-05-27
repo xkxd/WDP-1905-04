@@ -5,12 +5,14 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+}
 
-  &:not(.no-hover):hover {
-    color: #ffffff !important;
-    background-color: $primary;
-    text-decoration: none;
-  }
+.product-box:hover .btn-main-small {
+  color: #ffffff !important;
+  background-color: $primary;
+  text-decoration: none;
+  transition: all 1s;
+  display: block;
 }
 
 .btn-main-small {
@@ -19,6 +21,11 @@
   line-height: 24px;
   padding: 5px 10px;
   font-weight: 400;
+  display: none;
+}
+
+.no-hover {
+  display: block;
 }
 
 .btn-outline {
