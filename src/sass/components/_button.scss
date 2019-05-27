@@ -5,6 +5,11 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+
+  &:not(.no-hover):hover {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
 }
 
 .btn-main-small {
