@@ -17,7 +17,11 @@
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
+<<<<<<< HEAD
       color: $default;
+=======
+      color: black;
+>>>>>>> Finished task WDP190504, changed blog posts
 
       & > * {
         flex: 1 1 auto;
@@ -37,7 +41,11 @@
     padding: 25px;
 
     h5 {
+<<<<<<< HEAD
       color: $default;
+=======
+      color: black;
+>>>>>>> Finished task WDP190504, changed blog posts
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -51,12 +59,23 @@
     }
 
     .more {
+      div {
+        display: inline-block;
+      }
       text-align: center;
       padding-top: 30px;
     }
     .btn-main {
       display: inline-block;
     }
+  }
+}
+.post-box:hover {
+  h5 {
+    color: $primary;
+  }
+  .btn-main {
+    background-color: $primary;
   }
 }
 .post-box:hover {
