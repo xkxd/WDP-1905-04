@@ -50,24 +50,11 @@
   }
 
   &.active {
+    cursor: pointer;
     i {
       background-color: $primary;
       color: #ffffff;
       border-color: $primary;
-      cursor: pointer;
-    }
-
-    .content {
-      color: $primary;
-    }
-  }
-
-  .task:hover {
-    i {
-      background-color: $primary;
-      color: #ffffff;
-      border-color: $primary;
-      cursor: pointer;
     }
 
     .content {
@@ -76,8 +63,21 @@
   }
 }
 
+.hover_box:hover {
+  cursor: pointer;
+  i {
+    background-color: $primary;
+    color: #ffffff;
+    border-color: $primary;
+  }
+
+  .content {
+    color: $primary;
+  }
+}
+
 @media (hover: none) {
-  .task {
+  .feature-box {
     i {
       background-color: $primary;
       color: #ffffff;
