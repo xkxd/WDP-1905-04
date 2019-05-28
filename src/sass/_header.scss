@@ -63,9 +63,6 @@ header {
           margin-right: 0.8rem;
         }
       }
-      @media (max-width: 768px) {
-        display: none;
-      }
     }
 
     .cart {
@@ -117,21 +114,9 @@ header {
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
-    form {
-      max-width: 100%;
-    }
 
     .container > .row {
       height: 84px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .col {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-      display: flex;
-      justify-content: center;
     }
 
     .menu {
@@ -182,15 +167,10 @@ header {
       color: $text-color;
 
       .category {
+        border-right: 1px solid $form-border-color;
         display: flex;
         align-items: center;
         position: relative;
-
-
-        width: 100vw;
-        max-width: 500px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
 
         i:first-child {
           color: $primary;
@@ -199,6 +179,11 @@ header {
           z-index: 0;
         }
 
+        i:last-child {
+          position: absolute;
+          right: 10px;
+          z-index: 0;
+        }
 
         select {
           -webkit-appearance: none;
@@ -222,10 +207,6 @@ header {
           padding-left: 10px;
           font-size: 14px;
           outline: none;
-          width: 100%;
-
-
-          position: relative;
 
           &::placeholder {
             color: $text-color;
@@ -241,41 +222,21 @@ header {
     }
   }
 }
-// task 11 section--products
-.section--products {
-  .row {
-    justify-content: center;
-  }
 
-  .col-3 {
-    min-width: 280px;
-  }
-}
-
-.section--blog-posts {
-  .row {
-    justify-content: center;
-  }
-
-  .col-4 {
-    min-width: 280px;
-  }
-}
-
-.col-auto {
-  box-sizing: border-box;
-  max-width: 100vw;
-
-  ul {
+@media only screen and (min-width: 768px) {
+  // tablets
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    top: 0;
   }
 }
-<<<<<<< HEAD
 
-
-.fa-search {
-  position: relative !important;
-  padding-right: 10px;
+@media only screen and (max-width: 468px) {
+  // mobile-phone
 }
-=======
->>>>>>> 60e542dabfa45e85913e56af25ecdb0cde23c545
