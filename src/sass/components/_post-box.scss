@@ -17,7 +17,7 @@
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
-      color: black;
+      color: $default;
 
       & > * {
         flex: 1 1 auto;
@@ -37,7 +37,7 @@
     padding: 25px;
 
     h5 {
-      color: black;
+      color: $default;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -51,7 +51,7 @@
     }
 
     .more {
-      div {
+      .btn-main {
         display: inline-block;
       }
       text-align: center;
