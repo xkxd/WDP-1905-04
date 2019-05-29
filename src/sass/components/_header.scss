@@ -2,6 +2,18 @@ header {
   .top-bar {
     background-color: $header-topbar-bg;
 
+    .top-bar-mobile-lang {
+      @media (max-width: 576px) {
+        width: 60%;
+      }
+    }
+
+    .top-bar-mobile-user {
+      @media (max-width: 576px) {
+        width: 40%;
+      }
+    }
+
     ul {
       list-style: none;
       margin: 0;
@@ -20,6 +32,14 @@ header {
             @extend .hover-text;
             color: $primary;
             text-decoration: none;
+          }
+
+          p {
+            display: inline-block;
+
+            @media (max-width: 576px) {
+              display: none;
+            }
           }
         }
       }
@@ -44,12 +64,26 @@ header {
 
   .company-claim {
     background-color: $header-bg;
+    display: flex;
+    flex-direction: row;
 
     .container > .row {
       height: 145px;
     }
 
+    .company-claim-logo {
+      @media (max-width: 576px) {
+        width: 60%;
+      }
+    }
     .phone-number {
+      text-align: left;
+
+      @media (max-width: 576px) {
+        width: 100%;
+        text-align: center;
+      }
+
       p {
         margin: 0;
         font-size: 17px;
@@ -68,6 +102,13 @@ header {
     }
 
     .cart {
+      text-align: right;
+
+      @media (max-width: 576px) {
+        text-align: center;
+        width: 40%;
+      }
+
       .cart-box {
         display: inline-block;
         position: relative;
@@ -112,6 +153,18 @@ header {
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .company-claim :nth-child(1) {
+      order: 3;
+    }
+    .company-claim :nth-child(2) {
+      order: 1;
+    }
+    .company-claim :nth-child(3) {
+      order: 2;
     }
   }
 
