@@ -171,6 +171,7 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+
         &:hover {
           background-color: rgba(36, 34, 34, 0.4);
         }
@@ -188,7 +189,7 @@ header {
           z-index: 0;
         }
 
-        .ddProducts {
+        .ddproducts {
           -webkit-appearance: none;
           border: 0;
           outline: 0;
