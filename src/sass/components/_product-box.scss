@@ -87,3 +87,22 @@
     width: 65px;
   }
 }
+
+.items_active {
+  visibility: hidden;
+  height: 200px;
+}
+
+.show {
+  visibility: visible;
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
