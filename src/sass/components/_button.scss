@@ -1,5 +1,5 @@
 .btn-main {
-  background-color: #2a2a2a;
+  background-color: $text-color;
   color: $font-button-color;
   font-size: 16px;
   line-height: 24px;
@@ -18,13 +18,18 @@
 .btn-outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $text-color;
+  color: $text-color;
   font-size: 13px;
   line-height: 22px;
-
   &:hover {
-    background-color: #2a2a2a;
+    background-color: $text-color;
     color: $font-button-color;
   }
+}
+
+.outlines > .active {
+  background-color: $primary;
+  color: $font-button-color;
+  border-color: $primary;
 }
