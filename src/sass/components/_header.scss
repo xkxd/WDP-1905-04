@@ -190,7 +190,7 @@ header {
           z-index: 0;
         }
 
-        .ddProducts {
+        .ddproducts {
           -webkit-appearance: none;
           border: 0;
           outline: 0;
@@ -237,7 +237,7 @@ header {
               background-color: $primary;
               display: none;
             }
-            .link-sofa > ul > li > a {
+            .link-sofa > ul a {
               color: $link-color;
               &:hover {
                 color: $font-button-color;
