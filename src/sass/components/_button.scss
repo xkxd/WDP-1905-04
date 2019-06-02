@@ -1,6 +1,6 @@
 .btn-main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $text-color;
+  color: $font-button-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -8,7 +8,7 @@
 }
 
 .product-box:hover .btn-main-small {
-  color: #ffffff !important;
+  color: $font-button-color !important;
   background-color: $primary;
   text-decoration: none;
   transition: all 1s;
@@ -31,19 +31,19 @@
 .btn-outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $text-color;
+  color: $text-color;
   font-size: 13px;
   line-height: 22px;
   &:hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    border-color: #2a2a2a;
+    background-color: $text-color;
+    color: $font-button-color;
+    border-color: $text-color;
   }
 }
 
 .outlines > .active {
   background-color: $primary;
-  color: #ffffff;
+  color: $font-button-color;
   border-color: $primary;
 }
