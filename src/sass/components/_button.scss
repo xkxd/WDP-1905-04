@@ -13,6 +13,11 @@
   line-height: 24px;
   padding: 5px 10px;
   font-weight: 400;
+  display: none;
+}
+
+.no-hover {
+  display: block;
 }
 
 .btn-outline {
@@ -22,9 +27,14 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
-
   &:hover {
     background-color: #2a2a2a;
     color: $font-button-color;
   }
+}
+
+.outlines > .active {
+  background-color: $primary;
+  color: #ffffff;
+  border-color: $primary;
 }
