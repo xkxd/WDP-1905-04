@@ -7,14 +7,6 @@
   padding: 10px 30px;
 }
 
-.product-box:hover .btn-main-small {
-  color: $font-button-color !important;
-  background-color: $primary;
-  text-decoration: none;
-  transition: all 1s;
-  display: block;
-}
-
 .btn-main-small {
   @extend .btn-main;
   font-size: 13px;
@@ -38,7 +30,6 @@
   &:hover {
     background-color: $text-color;
     color: $font-button-color;
-    border-color: $text-color;
   }
 }
 
