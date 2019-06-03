@@ -1,7 +1,20 @@
 .product-box {
-  background-color: #ffffff;
+  background-color: $font-button-color;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  .box-button {
+    visibility: hidden;
+  }
+  &:hover .box-button {
+    color: $font-button-color;
+    text-decoration: none;
+    visibility: visible;
+    transition: all 2s;
+  }
+  &:hover .price {
+    transition: all 1s;
+    background-color: $primary;
+  }
 
   .photo {
     position: relative;
@@ -22,7 +35,7 @@
       transform: translateX(-50%);
       background-color: #292929;
       border-radius: 50%;
-      color: #ffffff;
+      color: $font-button-color;
       padding: 30px 15px 5px 15px;
     }
 
