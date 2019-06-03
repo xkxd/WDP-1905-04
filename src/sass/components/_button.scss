@@ -28,3 +28,9 @@
     color: $font-button-color;
   }
 }
+
+.outlines > .active {
+  background-color: $primary;
+  color: $font-button-color;
+  border-color: $primary;
+}

@@ -5,14 +5,12 @@
   .box-button {
     visibility: hidden;
   }
-
   &:hover .box-button {
     color: $font-button-color;
     text-decoration: none;
     visibility: visible;
     transition: all 2s;
   }
-
   &:hover .price {
     transition: all 1s;
     background-color: $primary;
