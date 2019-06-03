@@ -17,15 +17,7 @@
       display: flex;
       background-color: #ffffff;
       font-size: 14px;
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: $default;
-=======
-      color: black;
->>>>>>> Finished task WDP190504, changed blog posts
-=======
-      color: $default;
->>>>>>> Corrected notes from mentor
 
       & > * {
         flex: 1 1 auto;
@@ -45,15 +37,7 @@
     padding: 25px;
 
     h5 {
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: $default;
-=======
-      color: black;
->>>>>>> Finished task WDP190504, changed blog posts
-=======
-      color: $default;
->>>>>>> Corrected notes from mentor
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -67,13 +51,15 @@
     }
 
     .more {
+      div {
+        display: inline-block;
+      }
       text-align: center;
       padding-top: 30px;
     }
     .btn-main {
       display: inline-block;
     }
-<<<<<<< HEAD
   }
 }
 .post-box:hover {
@@ -82,8 +68,6 @@
   }
   .btn-main {
     background-color: $primary;
-=======
->>>>>>> Changed _post-box.scss -> .btn-main
   }
 }
 .post-box:hover {
