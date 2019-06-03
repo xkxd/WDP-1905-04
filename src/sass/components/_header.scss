@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: $white-color;
+          color: #ffffff;
           font-size: 13px;
 
           &:hover {
@@ -52,7 +52,7 @@ header {
         margin: 0;
         font-size: 17px;
         line-height: 42px;
-        color: $light-grey;
+        color: rgb(216, 216, 216);
         font-weight: 500;
 
         i {
@@ -63,16 +63,13 @@ header {
           margin-right: 0.8rem;
         }
       }
-      @media (max-width: 768px) {
-        display: none;
-      }
     }
 
     .cart {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: $white-color;
+        color: #ffffff;
 
         .cart-icon {
           background-color: $primary;
@@ -96,13 +93,14 @@ header {
           background-color: $header-bg;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           font-size: 14px;
-          color: $light-white;
+          color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
           right: 0;
           transform: translate(50%, -50%);
+          padding-left: 5px;
         }
 
         &:hover {
@@ -115,23 +113,11 @@ header {
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px $black-rgb;
-    background-color: $white-color;
-    form {
-      max-width: 100%;
-    }
+    box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+    background-color: #ffffff;
 
     .container > .row {
       height: 84px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .col {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-      display: flex;
-      justify-content: center;
     }
 
     .menu {
@@ -156,14 +142,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid $white-color;
+            border-top: 4px solid #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: $white-color;
+              color: #ffffff;
               border-color: $primary;
             }
 
@@ -182,14 +168,13 @@ header {
       color: $text-color;
 
       .category {
+        border-right: 1px solid $form-border-color;
         display: flex;
         align-items: center;
         position: relative;
-
-        width: 100vw;
-        max-width: 500px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        &:hover {
+          background-color: rgba(36, 34, 34, 0.4);
+        }
 
         i:first-child {
           color: $primary;
@@ -198,15 +183,26 @@ header {
           z-index: 0;
         }
 
-        select {
+        i:last-child {
+          position: absolute;
+          right: 10px;
+          z-index: 0;
+        }
+
+        .ddProducts {
           -webkit-appearance: none;
           border: 0;
+          outline: 0;
           background-color: transparent;
           outline: none;
-          padding: 5px 5px 5px 35px;
+          padding: 5px 30px 5px 35px;
           font-size: 14px;
           position: relative;
           z-index: 1;
+          cursor: pointer;
+          option {
+            background-color: $primary;
+          }
         }
       }
 
@@ -220,11 +216,11 @@ header {
           padding-left: 10px;
           font-size: 14px;
           outline: none;
-          width: 100%;
-          position: relative;
+          background-color: transparent;
+          cursor: pointer;
 
           &::placeholder {
-            color: $text-color;
+            color: #b0b0b0;
           }
         }
 
@@ -232,38 +228,9 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+          cursor: pointer;
         }
       }
     }
   }
-}
-// task 11 section--products
-.section--products {
-  .row {
-    justify-content: center;
-  }
-
-  .col-3 {
-    min-width: 280px;
-  }
-}
-
-.section--blog-posts {
-  .row {
-    justify-content: center;
-  }
-}
-
-.col-auto {
-  box-sizing: border-box;
-  max-width: 100%;
-
-  ul {
-    flex-wrap: wrap;
-  }
-}
-
-.fa-search {
-  position: relative;
-  padding-right: 10px;
 }
