@@ -1,5 +1,3 @@
-$white-color: #ffffff;
-
 header {
   .top-bar {
     background-color: $header-topbar-bg;
@@ -54,7 +52,7 @@ header {
         margin: 0;
         font-size: 17px;
         line-height: 42px;
-        color: rgb(216, 216, 216);
+        color: $light-grey;
         font-weight: 500;
 
         i {
@@ -100,7 +98,7 @@ header {
           align-items: center;
           justify-content: center;
           font-size: 14px;
-          color: rgb(224, 227, 237);
+          color: $light-white;
           position: absolute;
           top: 50%;
           right: 0;
@@ -117,7 +115,7 @@ header {
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px rgba(1, 2, 2, .2);
+    box-shadow: 2px 3.464px 6px $black-rgb;
     background-color: $white-color;
     form {
       max-width: 100%;
@@ -131,7 +129,7 @@ header {
 
     .col {
       margin-top: 1rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       display: flex;
       justify-content: center;
     }
@@ -188,7 +186,6 @@ header {
         align-items: center;
         position: relative;
 
-
         width: 100vw;
         max-width: 500px;
         margin-top: 1rem;
@@ -200,7 +197,6 @@ header {
           left: 10px;
           z-index: 0;
         }
-
 
         select {
           -webkit-appearance: none;
@@ -241,7 +237,7 @@ header {
     }
   }
 }
-
+// task 11 section--products
 .section--products {
   .row {
     justify-content: center;
@@ -256,15 +252,11 @@ header {
   .row {
     justify-content: center;
   }
-
-  .col-4 {
-    min-width: 280px;
-  }
 }
 
 .col-auto {
   box-sizing: border-box;
-  max-width: 100vw;
+  max-width: 100%;
 
   ul {
     flex-wrap: wrap;
@@ -272,6 +264,6 @@ header {
 }
 
 .fa-search {
-  position: relative !important;
+  position: relative;
   padding-right: 10px;
 }
