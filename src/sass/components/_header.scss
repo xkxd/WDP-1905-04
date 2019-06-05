@@ -136,13 +136,14 @@ header {
           background-color: $header-bg;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           font-size: 14px;
           color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
           right: 0;
           transform: translate(50%, -50%);
+          padding-left: 5px;
         }
 
         &:hover {
@@ -230,6 +231,9 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        &:hover {
+          background-color: rgba(36, 34, 34, 0.4);
+        }
 
         i:first-child {
           color: $primary;
@@ -244,15 +248,20 @@ header {
           z-index: 0;
         }
 
-        select {
+        .ddProducts {
           -webkit-appearance: none;
           border: 0;
+          outline: 0;
           background-color: transparent;
           outline: none;
           padding: 5px 30px 5px 35px;
           font-size: 14px;
           position: relative;
           z-index: 1;
+          cursor: pointer;
+          option {
+            background-color: $primary;
+          }
         }
       }
 
@@ -266,9 +275,11 @@ header {
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          background-color: transparent;
+          cursor: pointer;
 
           &::placeholder {
-            color: $text-color;
+            color: #b0b0b0;
           }
         }
 
@@ -276,6 +287,7 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+          cursor: pointer;
         }
       }
     }

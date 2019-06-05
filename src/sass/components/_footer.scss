@@ -51,6 +51,8 @@ footer {
     }
 
     .copyright {
+      text-align: center;
+
       @media (max-width: 720px) {
         text-align: left;
       }
