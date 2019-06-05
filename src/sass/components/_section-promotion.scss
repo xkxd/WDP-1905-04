@@ -1,0 +1,52 @@
+.section-promotion {
+  padding-top: 5px;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  .hot-deals {
+    border: 1px solid black;
+    margin: 0;
+    padding: 2px 0;
+    background-color: black;
+    color: white;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-left: 0.5rem;
+
+      a {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        padding: 0;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+  .date {
+    border-radius: 100%;
+    border: 2px solid black;
+    margin: 0 2px;
+    padding: 5px;
+    text-align: center;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+}
