@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $font-button-color;
           font-size: 13px;
 
           &:hover {
@@ -69,7 +69,7 @@ header {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: $font-button-color;
 
         .cart-icon {
           background-color: $primary;
@@ -114,7 +114,7 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $font-button-color;
 
     .container > .row {
       height: 84px;
@@ -142,14 +142,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $font-button-color;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $font-button-color;
               border-color: $primary;
             }
 
@@ -171,9 +171,14 @@ header {
         border-right: 1px solid $form-border-color;
         display: flex;
         align-items: center;
+        width: 220px;
         position: relative;
         &:hover {
           background-color: rgba(36, 34, 34, 0.4);
+        }
+
+        &:hover {
+          background-color: $background-hover;
         }
 
         i:first-child {
@@ -188,8 +193,7 @@ header {
           right: 10px;
           z-index: 0;
         }
-
-        .ddProducts {
+        .ddproducts {
           -webkit-appearance: none;
           border: 0;
           outline: 0;
@@ -202,15 +206,65 @@ header {
           cursor: pointer;
           option {
             background-color: $primary;
+            cursor: pointer;
+          .list-ul {
+            background-color: $primary;
+            list-style-type: none;
+            font-size: 15px;
+            padding: 0;
+            text-align: center;
+            width: 220px;
+            position: absolute;
+            z-index: 10;
+            top: 37px;
+            left: -1px;
+            display: none;
+            a {
+              color: $link-color;
+              text-decoration: none;
+            }
+            li {
+              padding: 5px 0;
+              display: block;
+              &:hover {
+                background-color: $background-hover;
+              }
+              &:hover a {
+                color: $font-button-color;
+              }
+            }
+            li > ul {
+              position: absolute;
+              top: 70px;
+              left: 220px;
+              z-index: 10;
+              width: 200px;
+              padding-inline-start: 0px;
+              background-color: $primary;
+              display: none;
+            }
+            .link-sofa > ul a {
+              color: $link-color;
+              &:hover {
+                color: $font-button-color;
+              }
+            }
+            .link-sofa:hover ul {
+              display: block;
+            }
           }
         }
+      }
+
+      .category:hover .list-ul {
+        display: block;
       }
 
       .search-field {
         display: flex;
         align-items: center;
         position: relative;
-
+        width: 220px;
         input {
           border: 0;
           padding-left: 10px;
@@ -220,7 +274,7 @@ header {
           cursor: pointer;
 
           &::placeholder {
-            color: #b0b0b0;
+            color: $product-old-price-color;
           }
         }
 
