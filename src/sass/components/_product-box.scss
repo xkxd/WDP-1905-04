@@ -1,7 +1,20 @@
 .product-box {
-  background-color: #ffffff;
+  background-color: $font-button-color;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  .box-button {
+    visibility: hidden;
+  }
+  &:hover .box-button {
+    color: $font-button-color;
+    text-decoration: none;
+    visibility: visible;
+    transition: all 2s;
+  }
+  &:hover .price {
+    transition: all 1s;
+    background-color: $primary;
+  }
 
   .photo {
     position: relative;
@@ -20,9 +33,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $form-border-color;
       border-radius: 50%;
-      color: #ffffff;
+      color: $font-button-color;
       padding: 30px 15px 5px 15px;
     }
 
@@ -59,7 +72,7 @@
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid $text-color;
     position: relative;
 
     &::before {
