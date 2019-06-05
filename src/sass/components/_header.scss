@@ -120,7 +120,7 @@ header {
     form {
       max-width: 100%;
     }
-
+    
     .container > .row {
       height: 84px;
       display: flex;
@@ -184,6 +184,7 @@ header {
       .category {
         display: flex;
         align-items: center;
+        width: 220px;
         position: relative;
         width: 100vw;
         max-width: 500px;
@@ -191,6 +192,10 @@ header {
         margin-bottom: 1rem;
         &:hover {
           background-color: $black-rgba;
+        }
+
+        &:hover {
+          background-color: $background-hover;
         }
 
         i:first-child {
@@ -206,23 +211,75 @@ header {
           z-index: 0;
         }
 
-        select {
+        .ddproducts {
           -webkit-appearance: none;
           border: 0;
+          outline: 0;
           background-color: transparent;
           outline: none;
           padding: 5px 5px 5px 35px;
           font-size: 14px;
           position: relative;
-          z-index: 1;
+          cursor: pointer;
+
+          .list-ul {
+            background-color: $primary;
+            list-style-type: none;
+            font-size: 15px;
+            padding: 0;
+            text-align: center;
+            width: 220px;
+            position: absolute;
+            z-index: 10;
+            top: 37px;
+            left: -1px;
+            display: none;
+            a {
+              color: $link-color;
+              text-decoration: none;
+            }
+            li {
+              padding: 5px 0;
+              display: block;
+              &:hover {
+                background-color: $background-hover;
+              }
+              &:hover a {
+                color: $font-button-color;
+              }
+            }
+            li > ul {
+              position: absolute;
+              top: 70px;
+              left: 220px;
+              z-index: 10;
+              width: 200px;
+              padding-inline-start: 0px;
+              background-color: $primary;
+              display: none;
+            }
+            .link-sofa > ul a {
+              color: $link-color;
+              &:hover {
+                color: $font-button-color;
+              }
+            }
+            .link-sofa:hover ul {
+              display: block;
+            }
+          }
         }
+      }
+
+      .category:hover .list-ul {
+        display: block;
       }
 
       .search-field {
         display: flex;
         align-items: center;
         position: relative;
-
+        width: 220px;
         input {
           border: 0;
           padding-left: 10px;
@@ -234,7 +291,7 @@ header {
           cursor: pointer;
 
           &::placeholder {
-            color: $text-color;
+            color: $product-old-price-color;
           }
         }
 
@@ -242,6 +299,7 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+          cursor: pointer;
         }
       }
     }
