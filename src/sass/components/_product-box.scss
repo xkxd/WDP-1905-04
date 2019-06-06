@@ -67,6 +67,9 @@
           @extend .fas;
         }
       }
+      &:hover a {
+        color: blue;
+      }
     }
   }
 
