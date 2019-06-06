@@ -1,17 +1,15 @@
-console.log('test');
+'use strict';
 
-var tabContent = function () {
+let tabContent = function () {
   let lists = document.querySelectorAll('.accordion a');
   let rowItems = document.getElementsByClassName('items_active');
   let numberOfRowItems = rowItems.length;
 
   let listClickBack = function (item) {
-    this.item = item;
-    var self = this.item;
-    self.classList.add('active');
+    item.classList.add('active');
 
     for (var i = 0; i < lists.length; i++) {
-      if (lists[i].classList.contains('active') && lists[i] !== self) {
+      if (lists[i].classList.contains('active') && lists[i] !== item) {
         lists[i].classList.remove('active');
       }
     }
