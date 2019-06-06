@@ -1,5 +1,5 @@
 .feature-box {
-  border: 1px solid $grey-color;
+  border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
 
@@ -15,12 +15,12 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid $grey-color;
+      border: 1px solid #b6b6b6;
     }
 
     &::before {
       content: "";
-      border: 1px solid $grey-color;
+      border: 1px solid #b6b6b6;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -28,14 +28,14 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: $white-color;
+      background-color: #ffffff;
       z-index: -1;
     }
   }
 
   .content {
     text-transform: uppercase;
-    color: $default;
+    color: $text-color;
     margin-top: -0.5rem;
     letter-spacing: 1px;
 
@@ -50,39 +50,10 @@
   }
 
   &.active {
-    cursor: pointer;
     i {
       background-color: $primary;
-      color: $white-color;
+      color: #ffffff;
       border-color: $primary;
-    }
-
-    .content {
-      color: $primary;
-    }
-  }
-}
-
-.hover_box:hover {
-  cursor: pointer;
-  i {
-    background-color: $primary;
-    color: $white-color;
-    border-color: $primary;
-  }
-
-  .content {
-    color: $primary;
-  }
-}
-
-@media (hover: none) {
-  .feature-box {
-    i {
-      background-color: $primary;
-      color: $white-color;
-      border-color: $primary;
-      cursor: pointer;
     }
 
     .content {
