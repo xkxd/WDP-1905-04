@@ -1,5 +1,5 @@
 .feature-box {
-  border: 1px solid $grey-color;
+  border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
 
@@ -15,12 +15,12 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid $grey-color;
+      border: 1px solid #b6b6b6;
     }
 
     &::before {
       content: "";
-      border: 1px solid $grey-color;
+      border: 1px solid #b6b6b6;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -50,7 +50,6 @@
   }
 
   &.active {
-    cursor: pointer;
     i {
       background-color: $primary;
       color: $font-button-color;
