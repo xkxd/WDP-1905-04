@@ -2,6 +2,18 @@ header {
   .top-bar {
     background-color: $header-topbar-bg;
 
+    .top-bar-mobile-lang {
+      @media (max-width: 576px) {
+        width: 60%;
+      }
+    }
+
+    .top-bar-mobile-user {
+      @media (max-width: 576px) {
+        width: 40%;
+      }
+    }
+
     ul {
       list-style: none;
       margin: 0;
@@ -12,12 +24,22 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $font-button-color;
           font-size: 13px;
 
           &:hover {
+            @extend .hover-duration;
+            @extend .hover-text;
             color: $primary;
             text-decoration: none;
+          }
+
+          p {
+            display: inline-block;
+
+            @media (max-width: 576px) {
+              display: none;
+            }
           }
         }
       }
@@ -42,12 +64,26 @@ header {
 
   .company-claim {
     background-color: $header-bg;
+    display: flex;
+    flex-direction: row;
 
     .container > .row {
       height: 145px;
     }
 
+    .company-claim-logo {
+      @media (max-width: 576px) {
+        width: 60%;
+      }
+    }
     .phone-number {
+      text-align: left;
+
+      @media (max-width: 576px) {
+        width: 100%;
+        text-align: center;
+      }
+
       p {
         margin: 0;
         font-size: 17px;
@@ -66,10 +102,17 @@ header {
     }
 
     .cart {
+      text-align: right;
+
+      @media (max-width: 576px) {
+        text-align: center;
+        width: 40%;
+      }
+
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: $font-button-color;
 
         .cart-icon {
           background-color: $primary;
@@ -105,6 +148,8 @@ header {
 
         &:hover {
           .cart-icon {
+            @extend .hover-duration;
+            @extend .hover-bg;
             background-color: lighten($primary, 10%);
           }
         }
@@ -112,9 +157,21 @@ header {
     }
   }
 
+  @media (max-width: 576px) {
+    .company-claim :nth-child(1) {
+      order: 3;
+    }
+    .company-claim :nth-child(2) {
+      order: 1;
+    }
+    .company-claim :nth-child(3) {
+      order: 2;
+    }
+  }
+
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $font-button-color;
 
     .container > .row {
       height: 84px;
@@ -142,17 +199,19 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $font-button-color;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
+              @extend .hover-bg;
+              @extend .hover-text;
+              @extend .hover-duration;
               background-color: $primary;
-              color: #ffffff;
+              color: $font-button-color;
               border-color: $primary;
             }
-
             &.active {
               border-color: $text-color;
             }
@@ -171,7 +230,12 @@ header {
         border-right: 1px solid $form-border-color;
         display: flex;
         align-items: center;
+        width: 220px;
         position: relative;
+
+        &:hover {
+          background-color: $background-hover;
+        }
 
         i:first-child {
           color: $primary;
@@ -186,31 +250,85 @@ header {
           z-index: 0;
         }
 
-        select {
+        .ddproducts {
           -webkit-appearance: none;
           border: 0;
+          outline: 0;
           background-color: transparent;
           outline: none;
           padding: 5px 30px 5px 35px;
           font-size: 14px;
           position: relative;
-          z-index: 1;
+          cursor: pointer;
+
+          .list-ul {
+            background-color: $primary;
+            list-style-type: none;
+            font-size: 15px;
+            padding: 0;
+            text-align: center;
+            width: 220px;
+            position: absolute;
+            z-index: 10;
+            top: 37px;
+            left: -1px;
+            display: none;
+            a {
+              color: $link-color;
+              text-decoration: none;
+            }
+            li {
+              padding: 5px 0;
+              display: block;
+              &:hover {
+                background-color: $background-hover;
+              }
+              &:hover a {
+                color: $font-button-color;
+              }
+            }
+            li > ul {
+              position: absolute;
+              top: 70px;
+              left: 220px;
+              z-index: 10;
+              width: 200px;
+              padding-inline-start: 0px;
+              background-color: $primary;
+              display: none;
+            }
+            .link-sofa > ul a {
+              color: $link-color;
+              &:hover {
+                color: $font-button-color;
+              }
+            }
+            .link-sofa:hover ul {
+              display: block;
+            }
+          }
         }
+      }
+
+      .category:hover .list-ul {
+        display: block;
       }
 
       .search-field {
         display: flex;
         align-items: center;
         position: relative;
-
+        width: 220px;
         input {
           border: 0;
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          background-color: transparent;
+          cursor: pointer;
 
           &::placeholder {
-            color: $text-color;
+            color: $product-old-price-color;
           }
         }
 
@@ -218,6 +336,7 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+          cursor: pointer;
         }
       }
     }
