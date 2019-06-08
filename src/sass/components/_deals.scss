@@ -40,7 +40,7 @@
     padding: 5%;
     width: 90%;
     height: 90%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $background-border;
     top: 5%;
     left: 5%;
     border: none;
@@ -72,7 +72,7 @@
     .first-paragraph {
       display: flex;
       font-size: 2rem;
-      color: black;
+      color: $default;
       line-height: 2rem;
 
       .bold {
@@ -82,7 +82,7 @@
     }
     .second-paragraph {
       font-size: 1.5rem;
-      color: black;
+      color: $default;
       margin: 0;
       line-height: 1.5rem;
     }
@@ -113,7 +113,7 @@
     }
     .second-paragraph {
       font-size: 1.1rem;
-      color: black;
+      color: $default;
       margin: 0;
     }
   }
