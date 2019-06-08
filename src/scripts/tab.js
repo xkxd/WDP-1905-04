@@ -8,7 +8,7 @@ let tabContent = function () {
   let listClickBack = function (item) {
     item.classList.add('active');
 
-    for (var i = 0; i < lists.length; i++) {
+    for (let i = 0; i < lists.length; i++) {
       if (lists[i].classList.contains('active') && lists[i] !== item) {
         lists[i].classList.remove('active');
       }
@@ -17,14 +17,13 @@ let tabContent = function () {
 
   let showPictures = function (element) {
     let currentHref = element.getAttribute('href');
-    // remove all show
-    for (var i = 0; i < numberOfRowItems; i++) {
+    for (let i = 0; i < numberOfRowItems; i++) {
       document.querySelector('#' + rowItems[i].id).classList.remove('show');
     }
     document.querySelector(currentHref).classList.add('show');
   };
 
-  for (var i = 0; i < lists.length; i++) {
+  for (let i = 0; i < lists.length; i++) {
     lists[i].addEventListener('click', function () {
       listClickBack(this);
       showPictures(this);
