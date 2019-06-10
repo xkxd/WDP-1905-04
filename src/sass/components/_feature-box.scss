@@ -35,7 +35,7 @@
 
   .content {
     text-transform: uppercase;
-    color: $text-color;
+    color: $black-color;
     margin-top: -0.5rem;
     letter-spacing: 1px;
 
@@ -54,7 +54,7 @@
 
     i {
       background-color: $primary;
-      color: $font-button-color;
+      color: $white-color;
       border-color: $primary;
     }
 
@@ -67,6 +67,34 @@
 .hover_box:hover {
   cursor: pointer;
 
+  i {
+    background-color: $primary;
+    color: $white-color;
+    border-color: $primary;
+  }
+
+  .content {
+    color: $primary;
+  }
+}
+
+@media (hover: none) {
+  .feature-box {
+    i {
+      background-color: $primary;
+      color: $font-button-color;
+      border-color: $primary;
+      cursor: pointer;
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
+}
+
+.hover_box:hover {
+  cursor: pointer;
   i {
     background-color: $primary;
     color: $font-button-color;
