@@ -106,3 +106,23 @@
     width: 65px;
   }
 }
+
+//Tabs connected to js code
+.items_active {
+  visibility: hidden;
+  height: 330px;
+}
+
+.show {
+  visibility: visible;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
