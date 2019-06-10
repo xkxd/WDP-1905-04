@@ -1,3 +1,26 @@
 .section--features {
   padding: 5rem 0;
 }
+
+@media (max-width: 576px) {
+  // For cell phones:
+  //grid for media query
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      $width: 100% / 12 * $i;
+      flex: 0 0 $width;
+      max-width: $width;
+    }
+  }
+
+  .section--features {
+    padding: 3rem 0;
+    margin-left: 5%;
+    margin-right: 3%;
+  }
+
+  .feature-box {
+    padding-top: 10px;
+    height: 152px;
+  }
+}
