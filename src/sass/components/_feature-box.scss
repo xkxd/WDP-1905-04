@@ -51,6 +51,7 @@
 
   &.active {
     cursor: pointer;
+
     i {
       background-color: $primary;
       color: $font-button-color;
@@ -65,6 +66,7 @@
 
 .hover_box:hover {
   cursor: pointer;
+
   i {
     background-color: $primary;
     color: $font-button-color;
