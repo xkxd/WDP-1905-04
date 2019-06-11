@@ -77,6 +77,15 @@
       }
     }
   }
+  .star.hoverOn::before {
+    content: "\2605";
+    color: #d58e32;
+  }
+
+  .star.rated-star::before {
+    content: "\2605";
+    color: #d58e32;
+  }
 
   .line {
     margin: 0 10px;
