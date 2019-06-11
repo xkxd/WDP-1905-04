@@ -172,7 +172,7 @@ header {
   }
 
   .menu-bar {
-    box-shadow: 2px 3.464px 6px $black-rgb;
+    box-shadow: 2px 3.464px 6px $menu-bar-shadow;
     background-color: $font-button-color;
     form {
       max-width: 100%;
@@ -275,56 +275,60 @@ header {
           padding: 5px 5px 5px 35px;
           font-size: 14px;
           position: relative;
+          z-index: 1;
           cursor: pointer;
-
-          .list-ul {
+          option {
             background-color: $primary;
-            list-style-type: none;
-            font-size: 15px;
-            padding: 0;
-            text-align: center;
-            width: 220px;
-            position: absolute;
-            z-index: 10;
-            top: 37px;
-            left: -1px;
-            display: none;
-            a {
-              color: $link-color;
-              text-decoration: none;
-            }
-            li {
-              padding: 5px 0;
-              display: block;
-              &:hover {
-                background-color: $background-hover;
-              }
-              &:hover a {
-                color: $font-button-color;
-              }
-            }
-            li > ul {
-              position: absolute;
-              top: 70px;
-              left: 220px;
-              z-index: 10;
-              width: 200px;
-              padding-inline-start: 0px;
+            cursor: pointer;
+
+            .list-ul {
               background-color: $primary;
+              list-style-type: none;
+              font-size: 15px;
+              padding: 0;
+              text-align: center;
+              width: 220px;
+              position: absolute;
+              z-index: 10;
+              top: 37px;
+              left: -1px;
               display: none;
-            }
-            .link-sofa > ul a {
-              color: $link-color;
-              &:hover {
-                color: $font-button-color;
+              a {
+                color: $link-color;
+                text-decoration: none;
               }
-            }
-            .link-sofa:hover ul {
-              display: block;
+              li {
+                padding: 5px 0;
+                display: block;
+                &:hover {
+                  background-color: $background-hover;
+                }
+                &:hover a {
+                  color: $font-button-color;
+                }
+              }
+              li > ul {
+                position: absolute;
+                top: 70px;
+                left: 220px;
+                z-index: 10;
+                width: 200px;
+                padding-inline-start: 0px;
+                background-color: $primary;
+                display: none;
+              }
+              .link-sofa > ul a {
+                color: $link-color;
+                &:hover {
+                  color: $font-button-color;
+                }
+              }
+              .link-sofa:hover ul {
+                display: block;
+              }
             }
           }
         }
-      }
 
       .category:hover .list-ul {
         display: block;
@@ -344,17 +348,32 @@ header {
           position: relative;
           background-color: transparent;
           cursor: pointer;
-
-          &::placeholder {
-            color: $product-old-price-color;
-          }
         }
 
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          cursor: pointer;
+        .search-field {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: 220px;
+          input {
+            border: 0;
+            padding-left: 10px;
+            font-size: 14px;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            &::placeholder {
+              color: $product-old-price-color;
+            }
+          }
+
+          button {
+            border: 0;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+          }
         }
       }
     }
