@@ -5,6 +5,14 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+
+  &:not(.no-hover):hover {
+    @extend .hover-bg;
+    @extend .hover-text;
+    @extend .hover-duration;
+    color: #ffffff !important;
+    text-decoration: none;
+  }
 }
 
 .btn-main-small {
@@ -22,7 +30,11 @@
   color: $text-color;
   font-size: 13px;
   line-height: 22px;
+
   &:hover {
+    @extend .hover-bg;
+    @extend .hover-text;
+    @extend .hover-duration;
     background-color: $text-color;
     color: $font-button-color;
   }
