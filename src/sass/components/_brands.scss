@@ -1,12 +1,26 @@
 .section-brands {
   text-align: center;
   .container {
-    padding: 10px;
+    padding: 20px;
   }
   img {
     padding: 10px;
   }
+
   .menu {
     border-top: 4px solid #e2e2e2;
+    padding: 20px;
+  }
+
+  .slider {
+    border: solid 3px $black-color;
+    background-color: $black-color;
+    color: $white-color;
+    padding: 30px 15px;
+    bottom: 26px;
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+    }
   }
 }
