@@ -2,7 +2,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="row">
-        <div class="col text-left">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-lang text-left">
           <ul>
             <li>
               <a href="#">USD <i class="fas fa-caret-down"></i></a>
@@ -15,13 +15,19 @@
             </li>
           </ul>
         </div>
-        <div class="col text-right">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-user text-right">
           <ul>
             <li>
-              <a href="#"><i class="fas fa-user"></i> Login</a>
+              <a href="#"
+                ><i class="fas fa-user"></i>
+                <p>Login</p></a
+              >
             </li>
             <li>
-              <a href="#"><i class="fas fa-lock"></i> Register</a>
+              <a href="#"
+                ><i class="fas fa-lock"></i>
+                <p>Register</p></a
+              >
             </li>
             <li>
               <a href="#"><i class="fas fa-bars"></i></a>
@@ -34,13 +40,13 @@
   <div class="company-claim">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col text-left phone-number">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 phone-number">
           <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
         </div>
-        <div class="col text-center">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center company-claim-logo">
           <a href="#"><img src="./images/logo.png"/></a>
         </div>
-        <div class="col text-right cart">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 cart">
           <a href="#" class="cart-box">
             <div class="cart-icon"><i class="fas fa-shopping-basket"></i></div>
             <div class="cart-counter">0</div>
@@ -56,14 +62,22 @@
           <form action="" class="search-form">
             <div class="category">
               <i class="fas fa-list-ul"></i>
-              <select name="" id="" class="ddproducts">
-                <option value="">Select a category</option>
-                <option value="bed">Bed</option>
-                <option value="chair">Chair</option>
-                <option value="sofa">Sofa</option>
-                <option value="table">Table</option>
-                <option value="dining">Dining</option>
-              </select>
+              <div name="" id="" class="ddproducts">
+                <span>Select a category</span>
+                <ul class="list-ul">
+                  <li><a href="#">Bed</a></li>
+                  <li><a href="#">Chair</a></li>
+                  <li class="link-sofa">
+                    <a href="#">Sofa</a>
+                    <ul>
+                      <li><a href="#">Leather sofa</a></li>
+                      <li><a href="#">Fabric sofa</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Table</a></li>
+                  <li><a href="#">Dining</a></li>
+                </ul>
+              </div>
               <i class="fas fa-caret-down"></i>
             </div>
             <div class="search-field">
