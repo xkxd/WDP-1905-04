@@ -28,7 +28,7 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: $white-color;
+      background-color: $font-button-color;
       z-index: -1;
     }
   }
@@ -82,7 +82,34 @@
   .feature-box {
     i {
       background-color: $primary;
-      color: $white-color;
+      color: $font-button-color;
+      border-color: $primary;
+      cursor: pointer;
+    }
+    .content {
+      color: $primary;
+    }
+  }
+}
+
+.hover_box:hover {
+  cursor: pointer;
+  i {
+    background-color: $primary;
+    color: $font-button-color;
+    border-color: $primary;
+  }
+
+  .content {
+    color: $primary;
+  }
+}
+
+@media (hover: none) {
+  .feature-box {
+    i {
+      background-color: $primary;
+      color: $font-button-color;
       border-color: $primary;
       cursor: pointer;
     }
