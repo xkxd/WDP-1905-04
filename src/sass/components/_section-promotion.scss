@@ -7,7 +7,7 @@
   .hot-deals {
     border: 1px solid black;
     margin: 0;
-    padding: 2px 0;
+    padding: 10px 0;
     background-color: black;
     color: white;
   }
@@ -36,31 +36,59 @@
       }
     }
   }
-  .section-date {
-    .date {
-      border-radius: 100%;
-      border: 2px solid black;
-      padding: 5px;
-      text-align: center;
+  .photo {
+    padding: 67% 10px 0 10px;
+    position: relative;
 
-      h5 {
-        margin: 0;
-        padding: 0;
-      }
+    .add-card {
+      position: absolute;
+      left: 33%;
+      top: 40%;
+      visibility: hidden;
+    }
+    &:hover .add-card {
+      visibility: visible;
+    }
 
-      p {
-        font-size: 1rem;
-        margin: 0;
-        padding: 0;
+    .section-date {
+      margin: 0 10px;
+      position: absolute;
+      top: 160px;
+      width: 90%;
+      left: 22px;
+      visibility: hidden;
+
+      .date {
+        margin: 0 4px;
+        border-radius: 100%;
+        border: 2px solid black;
+        text-align: center;
+        width: 20%;
+        padding: 5px;
+
+        h5 {
+          margin: 0;
+          padding: 0;
+        }
+
+        p {
+          font-size: 1rem;
+          margin: 0;
+          padding: 0;
+          text-transform: uppercase;
+        }
       }
+    }
+    &:hover .section-date {
+      visibility: visible;
     }
   }
   .promotion-photo-section {
     margin-bottom: 2rem;
-    border: 2px solid black;
+    text-align: center;
 
-    .photo {
-      padding: 66% 10px 0 10px;
+    .photo-right {
+      padding: 54% 10px 0 10px;
       position: relative;
       background: {
         color: #f4f5f7;
@@ -70,24 +98,51 @@
       }
       overflow: hidden;
       align-items: flex-end;
+      width: 100%;
     }
+
     .photo-text {
       position: absolute;
-      top: 200px;
+      top: 120px;
       left: 50%;
       transform: translateX(-50%);
       background-color: #292929;
       color: $font-button-color;
       padding: 50px 0;
       width: 100%;
-      text-align: center;
+      opacity: 0.1;
     }
     .photo-button {
+      position: absolute;
+      top: 290px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .photo-button-element {
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 15px 25px;
+
+        a {
+          color: black;
+          text-decoration: none;
+          font-size: 15px;
+        }
+      }
     }
   }
+
   .next-prev-button {
-    height: 20%;
-    background-color: blue;
-    border: 2px solid black;
+    padding: 4px 4px;
+    background-color: #2a2a2a;
+    border: 1px solid #757575;
+
+    a {
+      color: #ffffff;
+    }
+
+    &.active {
+      background-color: $primary;
+    }
   }
 }
