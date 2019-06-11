@@ -62,7 +62,7 @@
     }
 
     .stars {
-      a {
+      span {
         text-decoration: none;
         color: rgb(42, 42, 42);
         @extend .far;
@@ -71,20 +71,16 @@
         &.full {
           @extend .fas;
         }
-      }
-      &:hover a {
-        color: blue;
+        &.hoverOn {
+          font-weight: 900;
+          color: #d58e32;
+        }
+        &.rated-star {
+          font-weight: 900;
+          color: #d58e32;
+        }
       }
     }
-  }
-  .star.hoverOn::before {
-    content: "\2605";
-    color: #d58e32;
-  }
-
-  .star.rated-star::before {
-    content: "\2605";
-    color: #d58e32;
   }
 
   .line {
