@@ -330,24 +330,8 @@ header {
           }
         }
 
-      .category:hover .list-ul {
-        display: block;
-      }
-
-      .search-field {
-        display: flex;
-        align-items: center;
-        position: relative;
-        width: 220px;
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
-          width: 100%;
-          position: relative;
-          background-color: transparent;
-          cursor: pointer;
+        .category:hover .list-ul {
+          display: block;
         }
 
         .search-field {
@@ -360,52 +344,69 @@ header {
             padding-left: 10px;
             font-size: 14px;
             outline: none;
+            width: 100%;
+            position: relative;
             background-color: transparent;
             cursor: pointer;
-
-            &::placeholder {
-              color: $product-old-price-color;
-            }
           }
 
-          button {
-            border: 0;
-            background-color: transparent;
-            outline: none;
-            cursor: pointer;
+          .search-field {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 220px;
+            input {
+              border: 0;
+              padding-left: 10px;
+              font-size: 14px;
+              outline: none;
+              background-color: transparent;
+              cursor: pointer;
+
+              &::placeholder {
+                color: $product-old-price-color;
+              }
+            }
+
+            button {
+              border: 0;
+              background-color: transparent;
+              outline: none;
+              cursor: pointer;
+            }
           }
         }
       }
     }
   }
-}
 
-.section--products {
-  .row {
-    justify-content: center;
+  .section--products {
+    .row {
+      justify-content: center;
+    }
+
+    .col-3 {
+      min-width: 280px;
+    }
   }
 
-  .col-3 {
-    min-width: 280px;
+  .section--blog-posts {
+    .row {
+      justify-content: center;
+    }
   }
-}
 
-.section--blog-posts {
-  .row {
-    justify-content: center;
+  .col-auto {
+    box-sizing: border-box;
+    max-width: 100%;
+
+    ul {
+      flex-wrap: wrap;
+    }
   }
-}
 
-.col-auto {
-  box-sizing: border-box;
-  max-width: 100%;
-
-  ul {
-    flex-wrap: wrap;
+  .fa-search {
+    position: relative;
+    padding-right: 10px;
   }
-}
-
-.fa-search {
-  position: relative;
-  padding-right: 10px;
 }
