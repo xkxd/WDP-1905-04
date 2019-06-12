@@ -4,83 +4,89 @@
   font-weight: 600;
   margin: 5px;
 
-  .hot-deals {
-    border: 1px solid $black-color;
-    margin: 0;
-    padding: 10px 0;
-    background-color: $black-color;
-    color: $white-color;
-  }
+  .hot-deals-section {
+    @media (max-width: 576px) {
+      display: none;
+    }
 
-  ul {
-    margin: 0;
-    padding: 0 0 0 1rem;
-    list-style: none;
+    .hot-deals {
+      border: 1px solid $black-color;
+      margin: 0;
+      padding: 10px 0;
+      background-color: $black-color;
+      color: $white-color;
+    }
 
-    li {
-      display: inline-block;
-      margin-left: 0.5rem;
+    ul {
+      margin: 0;
+      padding: 0 0 0 1rem;
+      list-style: none;
 
-      a {
-        display: block;
-        width: 13px;
-        height: 13px;
-        border-radius: 6px;
-        background-color: #ffffff;
-        padding: 0;
+      li {
+        display: inline-block;
+        margin-left: 0.5rem;
 
-        &.active,
-        &:hover {
-          background-color: $primary;
+        a {
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: $white-color;
+          padding: 0;
+
+          &.active,
+          &:hover {
+            background-color: $primary;
+          }
         }
       }
     }
-  }
-  .photo {
-    padding: 67% 10px 0 10px;
-    position: relative;
+    .photo {
+      padding: 67% 10px 0 10px;
+      position: relative;
 
-    .add-card {
-      position: absolute;
-      left: 33%;
-      top: 40%;
-      visibility: hidden;
-    }
-    &:hover .add-card {
-      visibility: visible;
-    }
+      .add-card {
+        position: absolute;
+        left: 33%;
+        top: 40%;
+        visibility: hidden;
+      }
+      &:hover .add-card {
+        visibility: visible;
+      }
 
-    .section-date {
-      margin: 0 10px;
-      position: absolute;
-      top: 160px;
-      width: 90%;
-      left: 22px;
-      visibility: hidden;
+      .section-date {
+        margin: 0 10px;
+        position: absolute;
+        top: 160px;
+        width: 90%;
+        left: 22px;
+        visibility: hidden;
 
-      .date {
-        margin: 0 4px;
-        border-radius: 100%;
-        border: 2px solid $black-color;
-        text-align: center;
-        width: 20%;
-        padding: 5px;
+        .date {
+          margin: 0 4px;
+          border-radius: 100%;
+          border: 2px solid $black-color;
+          text-align: center;
+          width: 20%;
+          padding: 5px;
 
-        h5 {
-          margin: 0;
-          padding: 0;
-        }
+          h5 {
+            margin: 0;
+            padding: 0;
+          }
 
-        p {
-          font-size: 1rem;
-          margin: 0;
-          padding: 0;
-          text-transform: uppercase;
+          p {
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+          }
         }
       }
-    }
-    &:hover .section-date {
-      visibility: visible;
+      &:hover .section-date {
+        visibility: visible;
+      }
     }
   }
   .promotion-photo-section {
@@ -88,10 +94,15 @@
     text-align: center;
 
     .photo-right {
+      @media (max-width: 576px) {
+        height: 50vh;
+        padding: 80% 10px 0 10px;
+      }
+
       padding: 54% 10px 0 10px;
       position: relative;
       background: {
-        color: #f4f5f7;
+        color: $background-photo-right-color;
         size: contain;
         position: center;
         repeat: no-repeat;
@@ -124,7 +135,7 @@
         padding: 15px 25px;
 
         a {
-          color: black;
+          color: $black-color;
           text-decoration: none;
           font-size: 15px;
         }
@@ -134,8 +145,8 @@
 
   .next-prev-button {
     padding: 4px 4px;
-    background-color: #2a2a2a;
-    border: 1px solid #757575;
+    background-color: $background-button-color;
+    border: 1px solid $button-border-color;
 
     a {
       color: $white-color;
