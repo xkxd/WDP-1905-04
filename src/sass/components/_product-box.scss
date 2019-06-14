@@ -71,13 +71,13 @@
         &.full {
           @extend .fas;
         }
-        &.hoverOn {
+        &.hover-on {
           font-weight: 900;
-          color: #d58e32;
+          color: $primary;
         }
         &.rated-star {
           font-weight: 900;
-          color: #d58e32;
+          color: $primary;
         }
       }
     }
