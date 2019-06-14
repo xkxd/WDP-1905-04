@@ -11,7 +11,7 @@
     "clean": "rimraf dist",
     "code-quality": "npm run format && npm run lint",
     "format": "prettier --write \"src/**/*.{js,html,scss}\"",
-    "lint": "eslint src/"
+    "lint": "eslint src/scripts/"
   },
   "husky": {
     "hooks": {
@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "src/scripts/*.js": [
       "eslint --fix",
       "git add"
     ]
