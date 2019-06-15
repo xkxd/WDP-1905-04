@@ -109,12 +109,11 @@
 
 //Tabs connected to js code
 .items_active {
-  visibility: hidden;
-  height: 330px;
+  display: none;
 }
 
 .show {
-  visibility: visible;
+  display: inline-flex;
   animation: fadein 2s;
 }
 
