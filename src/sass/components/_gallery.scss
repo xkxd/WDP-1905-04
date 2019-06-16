@@ -1,0 +1,121 @@
+.section--gallery {
+  .box-left {
+    border: 1px solid $grey-color;
+    position: relative;
+    background-color: $light-white;
+    height: 490px;
+  }
+
+  .left-button-panel {
+    .btn-outline {
+      margin: 5px 0;
+    }
+    position: absolute;
+    left: 0;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px;
+  }
+
+  .menu {
+    background-color: $white-color;
+
+    //align-self: stretch;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 30%;
+
+        a {
+          color: $text-color;
+          text-transform: uppercase;
+          font-size: 1rem;
+          padding: 0.2rem;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top: 4px solid $font-button-color;
+          font-weight: 500;
+          letter-spacing: 1px;
+          width: 100%;
+
+          &:hover,
+          &.active {
+            background-color: $light-white;
+            color: $primary;
+            border-color: $primary;
+          }
+          &.active {
+            border-color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .box-right {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    // width: auto;
+    height: 600px;
+  }
+
+  .right-text {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    text-align: left;
+  }
+
+  .paragraph-one {
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  .first-word {
+    padding-top: 1.5rem;
+  }
+  .price {
+    margin-left: 1rem;
+    font-size: 3rem;
+    color: $gallery-price;
+  }
+
+  .paragraph-two {
+    font-size: 3rem;
+    color: $primary;
+    margin: 20px 0;
+    line-height: 3rem;
+  }
+
+  .btn-ship {
+    background-color: $gallery-price;
+    color: $white-color;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 600;
+    padding: 10px 30px;
+    text-decoration: none;
+  }
+
+  .btn-ship:hover {
+    background-color: $primary;
+  }
+}
