@@ -35,18 +35,3 @@ dla plików, które zostały wybrane do za-commit'owania.
 ## Konwencje i dobre praktyki
 
 DO UZUPEŁNIENIA
-
-# task WDP190504-29
-
-## Description
-
-Create brands section,
-created files:
-60_section-brands.html
-\_brands.scss
-
-## Details
-
-1. section-brands in 60_brands.html section is responsible for creating slider with images.
-2. The slider class is responsible for creating visible "sliders" - "<" and ">".
-3. In menu class there is a list of images created in src\image.
