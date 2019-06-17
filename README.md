@@ -35,3 +35,14 @@ dla plików, które zostały wybrane do za-commit'owania.
 ## Konwencje i dobre praktyki
 
 DO UZUPEŁNIENIA
+
+# task WDP190504-11
+
+## Description
+
+changes in 10_header.html
+changes in header.scss and panel.bar scss
+
+## Details
+
+1. section menu bar in 10_header.html section is responsible for display home and search in rwd, rwd styles are in header.scss
