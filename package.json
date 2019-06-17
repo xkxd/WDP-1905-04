@@ -6,6 +6,8 @@
   "scripts": {
     "prewatch": "npm run clean",
     "watch": "parcel src/index.html --open --no-autoinstall --port 8080",
+    "watch:sassprefixer": "node-sass --output-style expanded --source-map true -o css sass --watch && onchange -d 100 src/sass/*.{scss} -- autoprefixer-cli -o src/sass/*.{prefixed.scss} src/sass/*.{scss}",
+    "watch:browsersync": "node_modules/.bin/browser-sync start --server --files src/sass/*.{scss} *.html",
     "prebuild": "npm run clean",
     "build": "parcel build src/index.html",
     "clean": "rimraf dist",
@@ -35,12 +37,16 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
-    "parcel-bundler": "^1.11.0",
+    "parcel-bundler": "^1.12.3",
     "posthtml-modules": "^0.4.2",
     "prettier": "^1.15.3",
     "pretty-quick": "^1.8.0",
     "rimraf": "^2.6.3",
-    "sass": "^1.15.3"
+    "sass": "^1.15.3",
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.11.0",
+    "onchange": "^5.2.0"
   },
   "dependencies": {
     "browserslist": "^4.6.2",
