@@ -35,6 +35,7 @@ dla plików, które zostały wybrane do za-commit'owania.
 ## Konwencje i dobre praktyki
 
 DO UZUPEŁNIENIA
+
 # task WDP190504-35
 
 ## Description
@@ -50,4 +51,3 @@ DO UZUPEŁNIENIA
 watch:sassprefixer - Scirpt launch collection for CSS(3) which prefixes mixins library for Sass/Scss.
 
 watch:browsersync - Browsersync script cuts out repetitive manual tasks. From live reloads to URL pushing, form replication to click mirroring.
-

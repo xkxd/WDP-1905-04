@@ -1,11 +1,10 @@
 .section-promotion {
-  padding-top: 5px;
+  padding-top: 25px;
   font-size: 1.25rem;
-  font-weight: 600;
   margin: 5px;
 
   .hot-deals-section {
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       display: none;
     }
 
@@ -42,7 +41,7 @@
       }
     }
     .photo {
-      padding: 67% 10px 0 10px;
+      padding: 0;
       position: relative;
 
       .add-card {
@@ -50,6 +49,11 @@
         left: 33%;
         top: 40%;
         visibility: hidden;
+        opacity: 0.8;
+
+        a {
+          padding: 15px 20px;
+        }
       }
       &:hover .add-card {
         visibility: visible;
@@ -58,29 +62,30 @@
       .section-date {
         margin: 0 10px;
         position: absolute;
-        top: 160px;
+        top: 320px;
         width: 90%;
         left: 22px;
         visibility: hidden;
 
         .date {
-          margin: 0 4px;
+          margin: 0 2px;
           border-radius: 100%;
           border: 2px solid $black-color;
+          background-color: $black-color;
+          opacity: 0.8;
           text-align: center;
-          width: 20%;
-          padding: 5px;
+          width: 22%;
+          padding: 8px;
 
-          h5 {
+          h5,
+          p {
             margin: 0;
             padding: 0;
-          }
-
-          p {
             font-size: 1rem;
             margin: 0;
             padding: 0;
             text-transform: uppercase;
+            color: $white-color;
           }
         }
       }
@@ -90,26 +95,28 @@
     }
   }
   .promotion-photo-section {
-    margin-bottom: 2rem;
     text-align: center;
+    position: relative;
 
     .photo-right {
-      @media (max-width: 576px) {
-        height: 50vh;
-        padding: 80% 10px 0 10px;
-      }
+      background-color: $white-color;
+      max-width: 100%;
+      padding: 65px 0;
 
-      padding: 54% 10px 0 10px;
-      position: relative;
-      background: {
-        color: $background-photo-right-color;
-        size: contain;
-        position: center;
-        repeat: no-repeat;
+      @media (max-width: 1200px) {
+        padding: 6px 0;
       }
-      overflow: hidden;
-      align-items: flex-end;
-      width: 100%;
+      @media (max-width: 992px) {
+        padding: 17px 0;
+      }
+      @media (max-width: 768px) {
+        padding: 17px 0;
+        margin: 0 auto;
+      }
+      img {
+        max-width: 100%;
+        overflow: hidden;
+      }
     }
 
     .photo-text {
@@ -121,13 +128,28 @@
       color: $font-button-color;
       padding: 50px 0;
       width: 100%;
-      opacity: 0.1;
+      opacity: 0.3;
+      h2,
+      p {
+        color: white;
+        opacity: 1;
+      }
+
+      @media (max-width: 576px) {
+        top: 40px;
+      }
     }
     .photo-button {
+      border: 1px solid $button-border-color;
+      border-radius: 5px;
       position: absolute;
       top: 290px;
       left: 50%;
       transform: translateX(-50%);
+
+      @media (max-width: 576px) {
+        top: 190px;
+      }
 
       .photo-button-element {
         background-color: $white-color;
@@ -144,15 +166,21 @@
   }
 
   .next-prev-button {
-    padding: 4px 4px;
     background-color: $background-button-color;
     border: 1px solid $button-border-color;
+    padding: 20px 20px;
 
     a {
       color: $white-color;
+      position: absolute;
+      left: 43%;
     }
 
-    &.active {
+    &.active,
+    &:hover {
+      background-color: $primary;
+    }
+    &:active {
       background-color: $primary;
     }
   }
