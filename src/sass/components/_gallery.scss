@@ -1,11 +1,5 @@
 .section--gallery {
   .box-left {
-    img {
-      max-width: 100%;
-      height: 350px;
-      margin: auto;
-      display: block;
-    }
     border: 1px solid $grey-color;
     position: relative;
     background-color: $gallery-background;
@@ -13,6 +7,13 @@
     display: flex;
     flex-direction: column;
     align-content: space-around;
+
+    img {
+      max-width: 100%;
+      height: 350px;
+      margin: auto;
+      display: block;
+    }
   }
 
   .price-status {
@@ -32,16 +33,13 @@
     font-size: 1.2rem;
     padding-top: 25px;
   }
+
   .last-price {
     font-size: 1rem;
     text-decoration: line-through;
   }
 
   .description-box {
-    .text {
-      padding-top: 20px;
-      font-weight: bold;
-    }
     width: 250px;
     height: 110px;
     background-color: $white-color;
@@ -74,10 +72,15 @@
       right: 0;
       bottom: 0;
     }
+    .text {
+      padding-top: 20px;
+      font-weight: bold;
+    }
   }
 
   .stars {
     padding: 10px 0;
+
     a {
       text-decoration: none;
       color: rgb(42, 42, 42);
@@ -98,6 +101,7 @@
     justify-content: space-around;
     height: 80px;
   }
+
   .slider-left {
     display: flex;
     justify-content: center;
@@ -107,24 +111,24 @@
     height: 100%;
     width: 7%;
   }
+
   .slider-main-active {
+    height: 100%;
+    width: 14%;
+
     img {
       max-width: 100%;
       height: 100%;
       padding: 0 3px;
     }
-    height: 100%;
-    width: 14%;
   }
 
   .slider-main {
     @extend .slider-main-active;
     opacity: 0.5;
   }
+
   .slider-right {
-    .fas {
-      color: $primary;
-    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,10 +136,25 @@
     color: $white-color;
     height: 100%;
     width: 7%;
+
+    .fas {
+      color: $primary;
+    }
   }
 
   .left-button-panel {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+
     .btn-outline {
+      position: relative;
+      display: inline-block;
+      margin: 5px 0;
+
       .tooltiptext {
         visibility: hidden;
         width: 120px;
@@ -151,6 +170,7 @@
         margin-left: -60px;
         opacity: 0;
         transition: opacity 0.3s;
+
         &::after {
           content: "";
           position: absolute;
@@ -162,20 +182,12 @@
           background-color: $black-color;
         }
       }
+
       &:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
       }
-      position: relative;
-      display: inline-block;
-      margin: 5px 0;
     }
-    position: absolute;
-    left: 0;
-    top: 30%;
-    display: flex;
-    flex-direction: column;
-    margin: 5px 10px;
   }
 
   .menu {
@@ -222,14 +234,14 @@
   }
 
   .box-right {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
     img {
       max-width: 100%;
       height: 600px;
     }
-
-    position: relative;
-    margin: 0;
-    padding: 0;
   }
 
   .right-text {
@@ -247,6 +259,7 @@
   .first-word {
     padding-top: 1.5rem;
   }
+
   .price {
     margin-left: 1rem;
     font-size: 3rem;
